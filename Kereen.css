@@ -1,0 +1,395 @@
+/* CSS Variables for a modern & feminine palette */
+:root {
+  --primary-color: #2c3e50;  /* Dark, professional blue-gray */
+  --accent-color: #e573a0;   /* Soft, feminine pink */
+  --light-color: #f9f9f9;
+  --dark-color: #333;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --transition-speed: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.6;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  scroll-behavior: smooth;
+}
+
+/* Navigation */
+header {
+  background: var(--primary-color);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+
+/* Hamburger Menu (Mobile) */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
+  transition: all var(--transition-speed);
+  position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+  position: absolute;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  color: #fff;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--accent-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background var(--transition-speed);
+}
+
+.btn:hover {
+  background: #d05a82;
+}
+
+/* Section Styling */
+.section {
+  padding: 4rem 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+/* About Section */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.profile {
+  flex: 0 0 auto;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--accent-color);
+}
+
+.about-text {
+  flex: 1 1 300px;
+  max-width: 600px;
+  text-align: left;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+/* Contact Section */
+.contact-info {
+  max-width: 600px;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.contact-info a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--primary-color);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    border-radius: 0 0 4px 4px;
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/* Project Details Page */
+.project-details .back-btn {
+  margin-bottom: 1.5rem;
+}
+
+.project-img {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+}
+.project-details ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+.image-carousel {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.swiper {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-gallery {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between images */
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.image-wrapper img {
+  width: 30%; /* Adjust width */
+  height: auto;
+  max-width: 300px; /* Prevents oversized images */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.image-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 15px;
+  justify-content: center;
+}
+
+.image-wrapper img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.project-details h3 {
+  margin-top: 20px; /* Adds space above each heading */
+  margin-bottom: 10px; /* Adds space below each heading */
+}
+
+.project-details h3 {
+  padding-top: 20px;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.image-wrapper img {
+  width: 30%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.image-wrapper img:hover {
+  transform: scale(1.2); /* Enlarges the image */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+/* Image styling */
+.image-wrapper img {
+  width: 30%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-wrapper img:hover {
+  transform: scale(1.1);
+}
+
+/* Modal styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  display: block;
+  margin: auto;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}

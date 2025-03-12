@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Details</title>
+  <link rel="stylesheet" href="Kereen.css" />
+
+</head>
+<script>
+function openModal(img) {
+  document.getElementById("imageModal").style.display = "flex";
+  document.getElementById("modalImg").src = img.src;
+}
+
+function closeModal() {
+  document.getElementById("imageModal").style.display = "none";
+}
+</script>
+
+<body>
+  <!-- Navigation (optional simplified header) -->
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="Kereen.html">MyPortfolio</a></div>
+    </nav>
+  </header>
+
+  <!-- Project Details Section -->
+<section class="section project-details">
+  <div class="container">
+    <a href="Kereen.html" class="btn back-btn">&larr; Back to Portfolio</a>
+    <h2>A Comparative Analysis of Classification Algorithms for Land Cover Mapping: A Case Study of Ruaka, Kiambu County</h2>
+    <!--<img src="project1.jpg" alt="Project Image" class="project-img" />-->
+
+    <h3>Key Methodology</h3>
+    <ul>
+      <li><strong>Preprocessing:</strong> Filtering, compositing, and cloud masking were applied in Google Earth Engine (GEE) to enhance classification accuracy.</li>
+      <li><strong>Classification & Validation:</strong> Land cover classes (Built-up, Agriculture, Vegetation, and Bareland) were mapped using CART, RF, and SVM, validated using Overall Accuracy (OA) and Kappa Coefficient metrics.</li>
+      <li><strong>Comparison & Analysis:</strong> Performance of classifiers was compared in detecting land cover changes over time.</li>
+    </ul>
+
+    <h3>Results & Findings</h3>
+    <ul>
+      <li><strong>Accuracy:</strong> Random Forest consistently performed best, with the highest OA (96%) and Kappa (0.95) in 2023, followed by SVM, and then CART.</li>
+      <li><strong>Land Cover Trends:</strong> Urban areas expanded, agriculture declined, and forest cover fluctuated, indicating rapid urbanization in Ruaka.</li>
+      <li><strong>Algorithm Suitability:</strong> RF was the most reliable classifier across all years, while SVM performed better in detecting vegetation changes.</li>
+    </ul>
+
+    <h3>Conclusion & Recommendations</h3>
+    <p>The study underscores Random Forest as the most effective classifier for mixed land use areas like Ruaka. It also highlights the need for ancillary data (e.g., soil type, elevation) and improved classification techniques for bareland detection. These findings support urban planning and environmental monitoring efforts in rapidly changing landscapes.</p>
+
+    <p><strong>📌 Code Repository:</strong> Available on Google Earth Engine (<a href="https://code.earthengine.google.com/2c5acd3d43d948e1df86739163fe9f25">2017<a/>, <a href="https://code.earthengine.google.com/9ae079839cd3fac256ac09b35ad99744">2020</a>, <a href="https://code.earthengine.google.com/057788b0095bffb34a65a2679eadff09">2023</a>).</p>
+  </div>
+</section>
+
+<!-- Image Gallery Section -->
+<section class="section image-gallery">
+  <div class="container">
+    <h3>Project Images</h3>
+    <div class="image-wrapper">
+      <img src="resources/2017.png" alt="Image 1" onclick="openModal(this)">
+      <img src="resources/2020.png" alt="Image 2" onclick="openModal(this)">
+      <img src="resources/2023.png" alt="Image 3" onclick="openModal(this)">
+    </div>
+  </div>
+</section>
+
+<!-- Modal Structure -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Kereen. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

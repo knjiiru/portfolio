@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Details</title>
+  <link rel="stylesheet" href="Kereen.css" />
+
+</head>
+<script>
+function openModal(img) {
+  document.getElementById("imageModal").style.display = "flex";
+  document.getElementById("modalImg").src = img.src;
+}
+
+function closeModal() {
+  document.getElementById("imageModal").style.display = "none";
+}
+</script>
+<body>
+  <!-- Navigation (optional simplified header) -->
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="Kereen.html">MyPortfolio</a></div>
+    </nav>
+  </header>
+
+  <!-- Project Details Section -->
+<section class="section project-details">
+  <div class="container">
+    <a href="Kereen.html" class="btn back-btn">&larr; Back to Portfolio</a>
+    <h2>Cartographic Map Design and Production: Automated Map Series Creation</h2>
+    <!--<img src="project1.jpg" alt="Project Image" class="project-img" />-->
+
+    <h3>Project Overview</h3>
+    <p>This project focused on designing a multi-sheet map series using ArcMap while applying core cartographic principles such as generalization, symbolization, and scale optimization. The goal was to ensure that spatial data was effectively visualized at a large scale, balancing detail and clarity across 16 map sheets.</p>
+
+    <h3>Study Area & Specifications</h3>
+    <ul>
+      <li><strong>Location:</strong> 34° 15’ 00” - 34° 30’ 00” E and 0° 30’ 00” S - 0° 45’ 00” S</li>
+      <li><strong>Extent:</strong> 756.25 km² (186,873.445 acres)</li>
+      <li><strong>Scale & Paper Size:</strong> Optimized for A1 layout</li>
+    </ul>
+
+    <h3>Methodology & Process</h3>
+    <ol>
+      <li><strong>Grid Index & Data-Driven Pages Setup</strong></li>
+      <ul>
+        <li>Created a 4×4 grid index to divide the map series into 16 sheets</li>
+        <li>Added a scale field for automated scaling across all pages</li>
+      </ul>
+
+      <li><strong>Data Acquisition, Generalization & Symbolization</strong></li>
+      <ul>
+        <li><strong>Data Sources:</strong></li>
+        <ul>
+          <li>OpenStreetMap (via Geofabrik) → Roads, buildings, land cover</li>
+          <li>SRTM (via RCMRD Geoportal) → Digital Terrain Model (DTM) & contours</li>
+        </ul>
+        <li><strong>Cartographic Processing:</strong></li>
+        <ul>
+          <li><strong>Generalization:</strong>Adjusted feature density and detail to match the map scale</li>
+          <li><strong>Symbolization:</strong>Applied appropriate colors, line styles, and text sizes for legibility</li>
+          <li><strong>Labeling:</strong>Optimized placement to avoid overlap and enhance readability</li>
+        </ul>
+      </ul>
+
+        <li><strong>Cartographic Layout & Map Elements</strong></li>
+        <ul>
+          <li>Added essential elements: title, grid, scale bar, legend, north arrow, and labels</li>
+          <li>Applied typography and visual hierarchy for clear interpretation</li>
+        </ul>
+
+        <li><strong>Automation & Exporting</strong></li>
+        <ul>
+          <li>Enabled data-driven pages to automate the production of the 16-sheet map series</li>
+          <li>Reviewed and refined dynamic elements such as labels and legends</li>
+          <li>Exported the final series as a high-resolution PDF</li>
+        </ul>
+
+    <h3>Project Outcome</h3>
+    <p>This project successfully applied cartographic principles to create a structured, visually coherent, and accurate map series. The process reinforced key skills in generalization, symbolization, map design, and automation, making it a scalable approach for large-area mapping projects</p>
+  </div>
+</section>
+
+<!-- Image Gallery Section -->
+<section class="section image-gallery">
+  <div class="container">
+    <h3>Project Images</h3>
+    <div class="image-wrapper">
+      <img src="resources/map4.png" alt="Image 1" onclick="openModal(this)">
+      <img src="resources/map5.png" alt="Image 2" onclick="openModal(this)">
+      <img src="resources/map8.png" alt="Image 3" onclick="openModal(this)">
+    </div>
+  </div>
+</section>
+
+<!-- Modal Structure -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Kereen. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
