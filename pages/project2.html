@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Details</title>
+  <link rel="stylesheet" href="../index.css" />
 
+</head>
+<script>
+function openModal(img) {
+  document.getElementById("imageModal").style.display = "flex";
+  document.getElementById("modalImg").src = img.src;
+}
+
+function closeModal() {
+  document.getElementById("imageModal").style.display = "none";
+}
+</script>
+<body>
+  <!-- Navigation (optional simplified header) -->
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="../index.html">MyPortfolio</a></div>
+    </nav>
+  </header>
+
+  <!-- Project Details Section -->
+<section class="section project-details">
+  <div class="container">
+    <a href="Kereen.html" class="btn back-btn">&larr; Back to Portfolio</a>
+    <h2>Topographic visualization of Mount Kenya</h2>
+    <!--<img src="project1.jpg" alt="Project Image" class="project-img" />-->
+
+    <h3>Introduction</h3>
+    <p>This map is an experiment to explore different mapping techniques in ArcGIS Pro. It uses a hillshaded Digital Elevation Model (DEM) to bring out the mountain’s rugged terrain, with colors transitioning from green (lowlands) to red (high-altitude peaks) for a clear sense of elevation.</p>
+
+    <h3>What is on the Map?</h3>
+    <ul>
+      <li><strong>Hillshade & DEM:</strong> This combination makes the landscape pop, showing ridges, valleys, and the overall shape of Mount Kenya.</li>
+      <li><strong>Cartographic Experimentation:</strong> The goal was to try out different GIS tools and visualization techniques, just to see what works best.</li>
+    </ul>
+
+    <h3>Data Source</h3>
+    <ol>
+      <li>The boundary data is from <a href="https://www.protectedplanet.net/en" >Protected Planet</a></li>
+      <li>The digital Elevation Model(DEM) is from <a href="https://opendata.rcmrd.org/datasets/9a461a538cf848299b996a28cdc42ef6/explore"> RCMRD</a></li>
+    </ol>
+  </div>
+</section>
+
+<!-- Image Gallery Section -->
+<section class="section image-gallery">
+  <div class="container">
+    <h3>Project Images</h3>
+    <div class="image-wrapper">
+      <img src="../resources/MtKenya.jpg" alt="Image 1" onclick="openModal(this)">
+    </div>
+  </div>
+</section>
+
+<!-- Modal Structure -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Kereen. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
