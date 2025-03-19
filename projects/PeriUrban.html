@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="../favicon.png" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peri Urban Analysis</title>
+  <link rel="stylesheet" href="../index.css" />
+
+</head>
+<script>
+function openModal(img) {
+  document.getElementById("imageModal").style.display = "flex";
+  document.getElementById("modalImg").src = img.src;
+}
+
+function closeModal() {
+  document.getElementById("imageModal").style.display = "none";
+}
+</script>
+<body>
+  <!-- Navigation (optional simplified header) -->
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="../index.html">MyPortfolio</a></div>
+    </nav>
+  </header>
+
+  <!-- Project Details Section -->
+<section class="section project-details">
+  <div class="container">
+    <a href="../index.html" class="btn back-btn">&larr; Back to Portfolio</a>
+    <h2>Comparative Analysis of Peri-Urban Land Use in Kenya, Germany, and South Africa</h2>
+    <!--<img src="project1.jpg" alt="Project Image" class="project-img" />-->
+
+    <h3>Introduction</h3>
+    <p>This analysis examines land use and land cover patterns in selected peri-urban areas across three countries: Ruaka (Kenya), Worth (Germany), and Mankweng (South Africa). These areas represent dynamic transitional zones between urban and rural environments, providing valuable insights into development patterns and land transformation processes across different geographical, economic, and cultural contexts.</p>
+
+    <h3>Methodology</h3>
+    <p>All maps were generated using satellite imagery from Planet, processed through a Random Forest classification algorithm in ArcGIS Pro. The classification system categorizes land into similar classes across all three sites: Water, Developed, Barren/Shrubland, Forest, and Planted/Cultivated areas.</p>
+    
+    <h3>Ruaka, Kenya</h3>
+    <p>Ruaka represents a typical peri-urban settlement in Kenya's rapidly urbanizing landscape. The map illustrates a mosaic of land use types, with developed areas interspersed with patches of cultivated land and forest coverage. The proximity to Nairobi likely influences the development patterns observed, with urbanization gradually encroaching on previously agricultural lands. The presence of forest areas suggests some preservation of natural vegetation amidst development pressures.</p>
+
+    <h3>Worth, Germany</h3>
+    <p>Worth exhibits a distinctly European pattern of peri-urban development characterized by a more structured and planned approach. The map reveals a clear delineation between developed areas (shown in red) and natural or agricultural zones. The substantial blue water bodies, including what appears to be a major river or canal system, demonstrate the importance of water resources in shaping development patterns. The forest areas (dark green) are substantial and well-defined, suggesting strong land use planning and forest conservation policies. The light green areas representing cultivated lands show a systematic agricultural pattern typical of European farming practices. The development pattern shows clustered settlements rather than sprawling urbanization, reflective of Germany's emphasis on compact development and preservation of green spaces.</p>
+
+    <h3>Mankweng, South Africa</h3>
+    <p>Mankweng displays a different pattern of peri-urban development characteristic of South African settlements. The map shows substantial areas of shrubland interspersed with developed regions and cultivated lands. The barren areas likely represent lands that have been cleared but not yet developed or are degraded former agricultural lands. The larger scale of the Mankweng map (covering up to 10 kilometers) compared to Ruaka (4 kilometers) and Worth (3 kilometers) suggests a more expansive peri-urban transition zone, which may reflect different land management approaches or population density patterns.</p>
+    
+    <h3>Comparative Analysis</h3>
+    <p>These three peri-urban areas reveal distinct patterns of development influenced by their regional contexts:</p>
+    <ul>
+      <li><strong>Development Patterns:</strong> Worth shows the most structured development with clear boundaries between urban and natural areas, reflecting Germany's strong spatial planning tradition. Ruaka displays a more organic and less structured pattern of development typical of rapidly urbanizing areas in developing countries. Mankweng exhibits a dispersed settlement pattern with large transition zones.</li>
+      <li><strong>Natural Resource Management:</strong> Worth demonstrates significant preservation of forest areas and water bodies, suggesting strong environmental protection policies. Ruaka shows smaller fragmented forest patches, indicating pressure on natural resources in Kenya's urban periphery. Mankweng's predominant shrubland suggests a different ecological context with semi-arid conditions.</li>
+      <li><strong>Agricultural Practices:</strong> All three areas maintain significant agricultural land use, but with different patterns. Worth shows systematic and well-defined agricultural areas, Ruaka displays smaller patches of cultivated land interspersed with development, and Mankweng shows larger areas of cultivated land likely representing more extensive farming practices.</li>
+      <li><strong>Infrastructure and Water:</strong> Worth's landscape is significantly shaped by water bodies, including what appears to be a major river system. Water features are less prominent in both Ruaka and Mankweng, reflecting different hydrological conditions and infrastructure development.</li>
+    </ul>
+
+    <h3>Summary</h3>
+    <p>These differences highlight how peri-urban development is influenced by a complex interplay of factors including governance structures, economic development levels, cultural attitudes toward land use, and natural environmental conditions.</p>
+  </div>
+</section>
+
+<!-- Image Gallery Section -->
+<section class="section image-gallery">
+  <div class="container">
+    <h3>Project Images</h3>
+    <div class="image-wrapper">
+      <img src="../resources/map9.jpg" alt="Image 1" onclick="openModal(this)">
+      <img src="../resources/map10.jpg" alt="Image 2" onclick="openModal(this)">
+      <img src="../resources/map11.jpg" alt="Image 3" onclick="openModal(this)">
+    </div>
+  </div>
+</section>
+
+<!-- Modal Structure -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Kereen. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
